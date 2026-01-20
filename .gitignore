@@ -1,0 +1,6 @@
+local/
+*__pycache__*
+*.pyc
+.env
+febbox.egg-info/
+dist/

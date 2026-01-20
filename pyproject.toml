@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools==69.5.1", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "febbox"
+version = "1.0.0"
+description = "CLI tool to upload files and directories to FebBox with resume capability and parallel uploads"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    { name = "Jaskirat Singh Maskeen", email = "jsmaskeen@gmail.com" }
+]
+
+keywords = ["febbox", "uploader", "cli", "file-upload"]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+    "License :: OSI Approved :: MIT License",
+]
+
+dependencies = [
+    "rich",
+    "aiohttp"
+]
+
+[project.scripts]
+febbox = "febbox.febbox:main"
+
+[tool.setuptools]
+packages = ["febbox"]
+license-files = ["LICENSE"]
